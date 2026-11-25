@@ -8,20 +8,20 @@ classDiagram
         +showMenu() void
         +readCommand() char
         +render(Maze, Player) void
-        +showResult(MoveResult) void
+        +showResult(int) void
     }
     class GameManager {
         -Maze maze
         -Player player
         -int stageIndex
-        -GameStatus status
+        -int status
         +startStage(int) void
-        +move(char) MoveResult
+        +move(char) int
         +restartStage() void
         +nextStage() boolean
         +getMaze() Maze
         +getPlayer() Player
-        +getStatus() GameStatus
+        +getStatus() int
         +getStageNumber() int
     }
     class Maze {
